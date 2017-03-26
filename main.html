@@ -27,6 +27,10 @@
         font-family: GothamBook;
 				src:url("assets/fonts/GothamRnd-Book.otf");
       }
+      @font-face {
+        font-family: GothamLight;
+				src:url("assets/fonts/GothamRnd-Light.otf");
+      }
       body {
           color: #f8f6f9;
           font-family: GothamMedium, sans-serif;
@@ -42,7 +46,17 @@
       .navbar-default {
         background-color:transparent;
         border: none;
+
       }
+
+      .navbar-default .navbar-nav>li>a {
+      color: #f7f7f7;
+      }
+      .navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover {
+      color: yellow;
+      }
+
+
 
       .navbar {
          margin-bottom: 0px;
@@ -50,12 +64,31 @@
 
       .navbar > .container
       {
-        background-color: #272e35; /* Dark Gunmetal */
+        background-color: #272e35;
+      }
 
+      .not-active {
+        pointer-events: none;
+        cursor: default;
+      }
+
+      @media (min-width:1200px) {
+          #home {
+            background-image: url("assets/svg/free-orders.svg");
+            background-repeat: no-repeat;
+            background-position: 90% 55%;
+          }
+
+          #menu {
+            background-image: url("assets/svg/free-orders.svg");
+            background-repeat: no-repeat;
+            background-position: 90% 55%;
+          }
       }
 
       #home {
         text-align: center;
+
       }
 
       #home h3 {
@@ -72,7 +105,7 @@
       }
 
       #home h2 {
-        margin: 0 0 1em;
+        margin: 0.25em 0 1em;
         padding: 0 0.5em;
       }
 
@@ -83,17 +116,37 @@
         padding-top: 50px;
       }
 
+      @media(min-width: 800px){
+        #about-us {
+          background-image: url("assets/svg/jack.svg") ;
+          background-repeat: no-repeat;
+          background-position: 90% 0;
+          -webkit-background-size:  auto 100vh;
+          background-size:  auto 100vh;
+        }
+      }
+
       #about-us {
         background-color: #272e35;
         min-height: 100vh;
         padding-top: 100px;
       }
 
-     #about-us .row {
-       margin: 0 6.5em auto;
-       max-width: 50em;
+    @media(max-width: 441px){
+        #about-us .row {
+          margin: 0 1.5em auto;
+          max-width: 50em;
 
-     }
+      }
+    }
+    @media (min-width: 442px) {
+
+      #about-us .row {
+        margin: 0 6.5em auto;
+        max-width: 50em;
+      }
+    }
+
 
     #about-us p+p {
       padding: 0.25em 0;
@@ -102,13 +155,13 @@
     #about-us h3 {
       padding-top: 0.25em;
       padding-bottom: 1.5em;
+      line-height: 1.55em;
     }
     #about-us p {
       line-height: 1.65em;
       font-family: GothamBook,sans-serif;
       color: grey;
     }
-
 
 
 
@@ -193,6 +246,7 @@
 
       .pricing .pricing__price {
       	color: #fff;
+        font-family: GothamLight,sans-serif;
       	font-size: 2.75em;
       	padding: 0.55em 0 0.15em;
       }
@@ -254,9 +308,9 @@
 
                  </ul>
                  <ul class="nav navbar-nav navbar-right">
-                   <li><a href="#">Spread the word</a>
-                   <li><a href="#"><i class="fa fa-facebook"></i></a>
-                   <li><a href="#"><i class="fa fa-twitter"></i></a>
+                   <li><a href="#" class="not-active">Spread the word</a>
+                   <li><a href="https://www.facebook.com/BhurjiMan/" target="_blank"><i class="fa fa-facebook"></i></a>
+                   <!-- <li><a href="#"><i class="fa fa-twitter"></i></a> --> <!-- TWITTER HANDLE ADD HERE-->
                  </ul>
                </div><!--End Navbar Collapse -->
            </div>
@@ -345,17 +399,17 @@
       <div class="row">
         <h3>Dear hungry bachelors and bachelorettes,</h3>
 
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, minus recusandae harum quia iste facere, itaque officia dicta vitae aut ex magnam delectus optio provident architecto, nemo expedita. Hic, asperiores!</p>
+        <p>We are a team of tech wizards and business enthusiasts, who are here to cater to your late night cravings! Although, we cannot solve it by offering delicious pakhala or Unit 6 dahi bara... but hey worry not! we have Bhurji Man to save your day..or we may say to save your night!</p>
 
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, minus recusandae harum quia iste facere, itaque officia dicta vitae aut ex magnam delectus optio provident architecto, nemo expedita. Hic, asperiores!</p>
+        <p>Our mission is to understand the working of small scale businesses and establish our...you know..Nah! Let's keep it simple.. our mission is to help Bhurji Man get his "khamba" of <span style="color:#eb4747">Jack Daniels!!!!</span> That's right folks! We're here just to solve some real bachelor problems!</p>
 
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, minus recusandae harum quia iste facere, itaque officia dicta vitae aut ex magnam delectus optio provident architecto, nemo expedita. Hic, asperiores!</p>
+        <p>There's no more going to be "Arey yaar late night match ke baad khana nahin milega", cuz guess what?, After your IPL matches Bhurji Man will be at your doorstep with delicious food. Your after match daaru parties are sorted buddy!</p>
 
-        <h3>Give us a call at 7022111933 from 10pm to 1pm. See you soon!</h3>
+        <h3>Give us a call at <span style="color:yellow">7682929049, 9776109531</span> from 10pm to 1pm. See you soon!</h3>
 
         <h4>Regards,</h4>
 
-        <p>Bhurjiman I shall get you food n you<br> help me buy my khamba !</p>
+        <p><img src="assets/svg/about.svg" style="width:39vh; height:auto; margin-top:10px;"></p>
 
 
 
