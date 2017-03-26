@@ -84,6 +84,10 @@
             background-repeat: no-repeat;
             background-position: 90% 55%;
           }
+
+          .invisible-large-screen {
+            visibility: hidden;display: inline;
+          }
       }
 
       #home {
@@ -321,7 +325,7 @@
 
     <!-- Home -->
     <div class="jumbotron">
-      <div class="container" id="home" >
+      <div class="container-fluid" id="home" >
         <div class="row">
           <h3>introducing</h3>
         </div>
@@ -336,17 +340,22 @@
         </div>
         <div class="row">
               <img src="assets/svg/scooter.svg" alt="Scooterwala" style="width: 30vh;">
-              <img src="assets/svg/callout.svg" alt="Lauch Date" style="width: 30vh;">
+              <img src="assets/svg/callout.svg" alt="Lauch Date" style="width: 30vh; margin-top: 2em;">
+        </div>
+        <div class="invisible-large-screen">
+          <div class="row" style="margin-top: 3em;">
+            <img src="assets/svg/free-orders.svg">
           </div>
         </div>
       </div>
+    </div>
 
 
 
     <!-- Menu -->
     <div class="container-fluid" id="menu">
       <div class="row">
-          <img src="assets/svg/hungry-bread-omlet.svg" alt="Hungry Hain?" style="width: 40vh; margin-left: 8.5em;">
+          <img src="assets/svg/hungry-bread-omlet.svg" alt="Hungry Hain?" style="width: 40vh; margin-left: 4.5em;">
       </div>
 
       <div class="row">
@@ -389,6 +398,12 @@
 
       <div class="row">
         <p style="padding: 0 1em;">Psst! Extra bread toasts available at <span style="color:yellow">Rs. 2</span> per piece</p>
+      </div>
+
+      <div class="invisible-large-screen">
+        <div class="row" style="margin-top: 3em;">
+          <img src="assets/svg/free-orders.svg">
+        </div>
       </div>
 
 
