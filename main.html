@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <title>Bhubaneswar's Late Night Food Delivery Service</title>
+
+    <!-- Bootstrap -->
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+    <style type="text/css">
+      @font-face {
+        font-family: GothamBold;
+				src:url("assets/fonts/GothamRnd-Bold.otf");
+      }
+      @font-face {
+        font-family: GothamMedium;
+				src:url("assets/fonts/GothamRnd-Medium.otf");
+      }
+      @font-face {
+        font-family: GothamBook;
+				src:url("assets/fonts/GothamRnd-Book.otf");
+      }
+      @font-face {
+        font-family: GothamLight;
+				src:url("assets/fonts/GothamRnd-Light.otf");
+      }
+      body {
+          color: #f8f6f9;
+          font-family: GothamMedium, sans-serif;
+      }
+
+      .jumbotron {
+        min-height: 100vh;
+         margin-bottom: 0px;
+         padding-top: 5em;
+         background-color: #272e35;
+      }
+
+      .navbar-default {
+        background-color:transparent;
+        border: none;
+
+      }
+
+      .navbar-default .navbar-nav>li>a {
+      color: #f7f7f7;
+      }
+      .navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover {
+      color: yellow;
+      }
+
+
+
+      .navbar {
+         margin-bottom: 0px;
+      }
+
+      .navbar > .container
+      {
+        background-color: #272e35;
+      }
+
+      .not-active {
+        pointer-events: none;
+        cursor: default;
+      }
+
+      @media (min-width:1200px) {
+          #home {
+            background-image: url("assets/svg/free-orders.svg");
+            background-repeat: no-repeat;
+            background-position: 90% 55%;
+          }
+
+          #menu {
+            background-image: url("assets/svg/free-orders.svg");
+            background-repeat: no-repeat;
+            background-position: 90% 55%;
+          }
+
+          .invisible-large-screen {
+            visibility: hidden;display: inline;
+          }
+      }
+
+      #home {
+        text-align: center;
+
+      }
+
+      #home h3 {
+        text-transform: uppercase;
+        font-size: 1em;
+        letter-spacing: 1em;
+        color:gray;
+      }
+
+      #home h4 {
+        color: gray;
+        letter-spacing: 0.125em;
+        margin:  0.5em 0 0.5em;
+      }
+
+      #home h2 {
+        margin: 0.25em 0 1em;
+        padding: 0 0.5em;
+      }
+
+      #menu {
+        background-color: #272e35;
+        text-align: center;
+        min-height: 100vh;
+        padding-top: 50px;
+      }
+
+      @media(min-width: 800px){
+        #about-us {
+          background-image: url("assets/svg/jack.svg") ;
+          background-repeat: no-repeat;
+          background-position: 90% 0;
+          -webkit-background-size:  auto 100vh;
+          background-size:  auto 100vh;
+        }
+      }
+
+      #about-us {
+        background-color: #272e35;
+        min-height: 100vh;
+        padding-top: 100px;
+      }
+
+    @media(max-width: 441px){
+        #about-us .row {
+          margin: 0 1.5em auto;
+          max-width: 50em;
+
+      }
+    }
+    @media (min-width: 442px) {
+
+      #about-us .row {
+        margin: 0 6.5em auto;
+        max-width: 50em;
+      }
+    }
+
+
+    #about-us p+p {
+      padding: 0.25em 0;
+    }
+
+    #about-us h3 {
+      padding-top: 0.25em;
+      padding-bottom: 1.5em;
+      line-height: 1.55em;
+    }
+    #about-us p {
+      line-height: 1.65em;
+      font-family: GothamBook,sans-serif;
+      color: grey;
+    }
+
+
+
+
+
+
+      .pricing {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      width: 100%;
+      margin: 0 auto 1em;
+      }
+
+      .pricing__item {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      text-align: center;
+      flex: 0 1 285px;
+      }
+
+      .pricing__feature-list {
+      text-align: left;
+      }
+
+      .pricing__action {
+      color: inherit;
+      border: none;
+      background: none;
+      }
+
+      .pricing__action:focus {
+      outline: none;
+      }
+
+      /* Sonam */
+      .pricing .pricing__item {
+      	margin: 1.5em;
+      	padding:  1.5em 0 1em 0;
+      	cursor: default;
+      	border-radius: 15px;
+      	background: #1F1F1F;
+      	box-shadow: 0 5px 20px rgba(0,0,0,0.05), 0 15px 30px -10px rgba(0,0,0,0.3);
+      	transition: background 0.3s;
+
+      }
+      .pricing .pricing__item#veg {
+        background: #36403d;
+        border: 3px solid #4b615a;
+      }
+
+      .pricing .pricing__item#nveg {
+        background: #3d4047;
+        border: 3px solid #56555d;
+      }
+      .pricing .pricing__item:hover#veg {
+      	background: #2f3735;
+      }
+      .pricing .pricing__item:hover#nveg {
+      	background: #34363d;
+
+      }
+
+      .pricing .pricing__title {
+      	font-size: 1.25em;
+      	width: 100%;
+      	margin: 0 0 0.25em;
+      	padding: 0 0 1.25em;
+      	border-bottom: 3px solid ;
+      }
+
+      .pricing .pricing__title#veg{
+      	border-bottom-color: #4b615a;
+      }
+
+
+      .pricing .pricing__title#nveg {
+      	border-bottom-color: #56555d;
+      }
+
+      .pricing .pricing__price {
+      	color: #fff;
+        font-family: GothamLight,sans-serif;
+      	font-size: 2.75em;
+      	padding: 0.55em 0 0.15em;
+      }
+
+
+      .pricing .pricing__feature-list {
+      	margin: 0;
+      	padding: 1em 1em 3em 4em;
+        line-height: 2em;
+        list-style: none;
+      }
+
+
+      .pricing .pricing__action:hover,
+      .pricing .pricing__action:focus {
+      	background: #BD3C3C;
+      }
+
+      .circle {
+          width: 10px;
+          height: 10px;
+          background: yellow;
+          -moz-border-radius: 5px;
+          -webkit-border-radius: 5px;
+          border-radius: 5px;
+          display: inline-block;
+          margin-right: 4px;
+      }
+
+      span > #veg {
+        background: #40bf40;
+      }
+
+      span > #nveg {
+          background: #eb4747;
+      }
+    </style>
+
+  </head>
+
+  <body>
+
+    <div class="navbar navbar-default navbar-fixed-top">
+     <div class="container">
+      <div>
+           <div class="navbar-header">
+             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+             </button>
+             <a class="navbar-brand" href="#">Bhurji Man</a>
+           </div>
+               <div class="navbar-collapse collapse">
+                 <ul class="nav navbar-nav">
+                   <li><a href="#">Home</a></li>
+                   <li><a href="#menu">Menu</a></li>
+                   <li><a href="#about-us">About Us</a></li>
+
+                 </ul>
+                 <ul class="nav navbar-nav navbar-right">
+                   <li><a href="#" class="not-active">Spread the word</a>
+                   <li><a href="https://www.facebook.com/BhurjiMan/" target="_blank"><i class="fa fa-facebook"></i></a>
+                   <!-- <li><a href="#"><i class="fa fa-twitter"></i></a> --> <!-- TWITTER HANDLE ADD HERE-->
+                 </ul>
+               </div><!--End Navbar Collapse -->
+           </div>
+        </div><!-- End Container -->
+   </div> <!--End Navard Default Fixed Top-->
+
+
+
+    <!-- Home -->
+    <div class="jumbotron">
+      <div class="container-fluid" id="home" >
+        <div class="row">
+          <h3>introducing</h3>
+        </div>
+        <div class="row">
+          <img src="assets/svg/logo.svg" alt="Bhurji Man" style="margin:0.8em 0;">
+        </div>
+        <div class="row">
+          <h4>Bhubaneswar's first</h4>
+        </div>
+        <div class="row">
+          <h2>Late night food delivery service</h2>
+        </div>
+        <div class="row">
+              <img src="assets/svg/scooter.svg" alt="Scooterwala" style="width: 30vh;">
+              <img src="assets/svg/callout.svg" alt="Lauch Date" style="width: 30vh; margin-top: 2em;">
+        </div>
+        <div class="invisible-large-screen">
+          <div class="row" style="margin-top: 3em;">
+            <img src="assets/svg/free-orders.svg">
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <!-- Menu -->
+    <div class="container-fluid" id="menu">
+      <div class="row">
+          <img src="assets/svg/hungry-bread-omlet.svg" alt="Hungry Hain?" style="width: 40vh; margin-left: 4.5em;">
+      </div>
+
+      <div class="row">
+          <h1>Menu</h1>
+      </div>
+
+      <div class="row">
+
+        <div class="pricing">
+          <!-- Veg Combo -->
+            <div class="pricing__item" id="veg">
+              <h3 class="pricing__title" id="veg">
+                <span><div class="circle" id="veg"></div></span>
+                Veg Combo</h3>
+              <div class="pricing__price"><span class="pricing__currency"><span style="color:#6c6c6d;">Rs.</span>60</span></div>
+              <ul class="pricing__feature-list">
+                <li class="pricing__feature">Chenna Bhurji (250 gms)</li>
+                <li class="pricing__feature">Bread Toast (5 pcs)</li>
+                <li class="pricing__feature">Salad</li>
+                <li class="pricing__feature">Mayo & Ketchup</li>
+              </ul>
+            </div> <!-- End Veg Combo -->
+
+          <!-- Non Veg Combo -->
+          <div class="pricing__item" id="nveg">
+              <h3 class="pricing__title" id="nveg">
+                  <span><div class="circle" id="nveg"></div></span>
+                Egg Combo</h3>
+              <div class="pricing__price"><span class="pricing__currency"><span style="color:#6c6c6d;">Rs.</span>60</span></div>
+              <ul class="pricing__feature-list">
+                <li class="pricing__feature">Egg Bhurji (250gms)</li>
+                <li class="pricing__feature">Bread Toast (5 pcs)</li>
+                <li class="pricing__feature">Salad</li>
+                <li class="pricing__feature">Ketchup & Mayo</li>
+              </ul>
+            </div> <!-- End Egg Combo -->
+          </div>  <!-- End Pricing -->
+
+      </div> <!--End Row -->
+
+      <div class="row">
+        <p style="padding: 0 1em;">Psst! Extra bread toasts available at <span style="color:yellow">Rs. 2</span> per piece</p>
+      </div>
+
+      <div class="invisible-large-screen">
+        <div class="row" style="margin-top: 3em;">
+          <img src="assets/svg/free-orders.svg">
+        </div>
+      </div>
+
+
+    </div> <!--End Container -->
+
+
+    <div class="container-fluid" id="about-us">
+      <div class="row">
+        <h3>Dear hungry bachelors and bachelorettes,</h3>
+
+        <p>We are a team of tech wizards and business enthusiasts, who are here to cater to your late night cravings! Although, we cannot solve it by offering delicious pakhala or Unit 6 dahi bara... but hey worry not! we have Bhurji Man to save your day..or we may say to save your night!</p>
+
+        <p>Our mission is to understand the working of small scale businesses and establish our...you know..Nah! Let's keep it simple.. our mission is to help Bhurji Man get his "khamba" of <span style="color:#eb4747">Jack Daniels!!!!</span> That's right folks! We're here just to solve some real bachelor problems!</p>
+
+        <p>There's no more going to be "Arey yaar late night match ke baad khana nahin milega", cuz guess what?, After your IPL matches Bhurji Man will be at your doorstep with delicious food. Your after match daaru parties are sorted buddy!</p>
+
+        <h3>Give us a call at <span style="color:yellow">7682929049, 9776109531</span> from 10pm to 1pm. See you soon!</h3>
+
+        <h4>Regards,</h4>
+
+        <p><img src="assets/svg/about.svg" style="width:39vh; height:auto; margin-top:10px;"></p>
+
+
+
+      </div>
+    </div>
+
+
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous">
+
+    // Smooth Scroll Plugin
+    $('.smooth').on('click', function() {
+    $.smoothScroll({
+        scrollElement: $('body'),
+        scrollTarget: '#' + this.id
+    });
+
+    return false;
+});
+
+
+    </script>
+
+  </body>
+</html>
