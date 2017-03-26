@@ -15,9 +15,21 @@
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 
     <style type="text/css">
-
+      @font-face {
+        font-family: GothamBold;
+				src:url("assets/fonts/GothamRnd-Bold.otf");
+      }
+      @font-face {
+        font-family: GothamMedium;
+				src:url("assets/fonts/GothamRnd-Medium.otf");
+      }
+      @font-face {
+        font-family: GothamBook;
+				src:url("assets/fonts/GothamRnd-Book.otf");
+      }
       body {
           color: #f8f6f9;
+          font-family: GothamMedium, sans-serif;
       }
 
       .jumbotron {
@@ -68,13 +80,34 @@
         background-color: #272e35;
         text-align: center;
         min-height: 100vh;
-        padding-top: 70px;
+        padding-top: 50px;
       }
 
+      #about-us {
+        background-color: #272e35;
+        min-height: 100vh;
+        padding-top: 100px;
+      }
 
+     #about-us .row {
+       margin: 0 6.5em auto;
+       max-width: 50em;
 
+     }
 
+    #about-us p+p {
+      padding: 0.25em 0;
+    }
 
+    #about-us h3 {
+      padding-top: 0.25em;
+      padding-bottom: 1.5em;
+    }
+    #about-us p {
+      line-height: 1.65em;
+      font-family: GothamBook,sans-serif;
+      color: grey;
+    }
 
 
 
@@ -234,7 +267,7 @@
 
     <!-- Home -->
     <div class="jumbotron">
-      <div class="container-fluid" id="home" >
+      <div class="container" id="home" >
         <div class="row">
           <h3>introducing</h3>
         </div>
@@ -301,13 +334,33 @@
       </div> <!--End Row -->
 
       <div class="row">
-        <p>Psst! Extra bread toasts available at Rs. 2 per piece</p>
+        <p style="padding: 0 1em;">Psst! Extra bread toasts available at <span style="color:yellow">Rs. 2</span> per piece</p>
       </div>
 
 
     </div> <!--End Container -->
 
 
+    <div class="container-fluid" id="about-us">
+      <div class="row">
+        <h3>Dear hungry bachelors and bachelorettes,</h3>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, minus recusandae harum quia iste facere, itaque officia dicta vitae aut ex magnam delectus optio provident architecto, nemo expedita. Hic, asperiores!</p>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, minus recusandae harum quia iste facere, itaque officia dicta vitae aut ex magnam delectus optio provident architecto, nemo expedita. Hic, asperiores!</p>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, minus recusandae harum quia iste facere, itaque officia dicta vitae aut ex magnam delectus optio provident architecto, nemo expedita. Hic, asperiores!</p>
+
+        <h3>Give us a call at 7022111933 from 10pm to 1pm. See you soon!</h3>
+
+        <h4>Regards,</h4>
+
+        <p>Bhurjiman I shall get you food n you<br> help me buy my khamba !</p>
+
+
+
+      </div>
+    </div>
 
 
 
